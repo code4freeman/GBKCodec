@@ -1,0 +1,21 @@
+{
+  "name": "gbkcodec",
+  "version": "0.0.1",
+  "description": "GBK编解码器",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilindog/GBKCodec"
+  },
+  "scripts": {
+    "test": "mocha",
+    "preinstall": "node scripts/init-githooks.js",
+    "lint": "eslint src/",
+    "build": "rollup --config rollup.config.js"
+  },
+  "author": "lilin <lilin@lilin.site> (https://github.com/lilindog/GBKCodec)",
+  "license": "MIT"
+}
