@@ -3,7 +3,7 @@
 const { version, author, license } = require("./package");
 const banner = `+
 /**+
- * Parseenv v${version}+
+ * GBKCodec v${version}+
  * Author ${author}+
  * Last-Modify ${new Date().toLocaleDateString()}+
  * License ${license}+
@@ -13,11 +13,7 @@ const banner = `+
 export default {
     input: "src/main.js",
     external: [
-        "url",
-        "path",
-        "http",
-        "https",
-        "fs"
+       
     ],
     output: [
         {
