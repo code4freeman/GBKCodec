@@ -1,10 +1,10 @@
 "use strict";
 
-const {
+import {
     encode,
     decode,
     decodeText
-} = require("../src/index");
+} from "../src/index.mjs";
 
 
 // const data = new Uint8Array([ 0x2d, 0x4e, 0xfd, 0x56, 0x41, 0x00 ]); // 中国A， utf16LE

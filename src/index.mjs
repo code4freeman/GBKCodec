@@ -7,7 +7,7 @@
  * 然而外部依赖代码都很庞大，有很多不需要的东西也带进来了；最重要的是依赖的代码依赖nodejs环境的基础api
  */
 
-const cp936map = require("./cp936map");
+import cp936map from "./cp936map.mjs";
 
 const WHAT_THE_FUCK = "?".charCodeAt(0);
 
@@ -156,7 +156,7 @@ const decodeText = (buffer, endianness = "BE") => {
     }, []).join("");
 };
 
-module.exports = {
+export {
     encode,
     decode,
     decodeText
