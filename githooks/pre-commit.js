@@ -9,10 +9,10 @@ const { runCmds } = require("../scripts/comm");
     } else {
         console.log("\n(: eslint 代码检测通过\n");
     }
-    // if (!await runCmds(["npm test"])) {
-    //     console.log(chalk.red("\n): 单元测试不通过，请重新检查！"));
-    //     process.exit(1);
-    // } else {
-    //     console.log(chalk.green("\n(: 单元测试通过"));
-    // }
+    if (!await runCmds(["npm test"])) {
+        console.log("\n): 单元测试不通过，请重新检查！");
+        process.exit(1);
+    } else {
+        console.log("\n(: 单元测试通过");
+    }
 }();

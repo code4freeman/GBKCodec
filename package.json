@@ -4,6 +4,9 @@
   "description": "GBK编解码器",
   "main": "dist/cjs/GBKCodec.min.js",
   "type": "commonjs",
+  "imports": {
+    "#GBKCodec": "./src/index.mjs"
+  },
   "exports": {
     ".": {
       "import": "./dist/esm/GBKCodec.min.mjs",
@@ -25,6 +28,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
     "eslint": "^8.19.0",
+    "mocha": "^10.0.0",
     "rollup": "^2.75.7"
   }
 }

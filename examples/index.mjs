@@ -4,7 +4,7 @@ import {
     encode,
     decode,
     decodeText
-} from "../src/index.mjs";
+} from "#GBKCodec";
 
 
 // const data = new Uint8Array([ 0x2d, 0x4e, 0xfd, 0x56, 0x41, 0x00 ]); // 中国A， utf16LE
