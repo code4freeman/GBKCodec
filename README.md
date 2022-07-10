@@ -30,4 +30,4 @@ const text = decodeText(gbkBuf);
 
 ## 🚧注意
 不处理BOM，需要自己提前处理。  
-不支持utf16代理区以上的码点。  
+不支持BMP以上的码点。  
