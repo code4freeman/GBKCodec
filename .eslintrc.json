@@ -1,13 +1,14 @@
 {
-    // 默认的解析不支持新特性，这里换成其他的解析器
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "env": {
         "node": true,
         "commonjs": true,
         "es6": true
     },
     "extends": "eslint:recommended",
-    "parserOptions": {},
+    "parserOptions": {
+        "requireConfigFile": false
+    },
     "rules": {
         // 缩进使用4个空格， 而非tab
         "indent": [

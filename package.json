@@ -17,12 +17,14 @@
   "scripts": {
     "test": "mocha",
     "preinstall": "node scripts/init-githooks.js",
-    "lint": "eslint src/",
+    "lint": "eslint src/**",
     "build": "rollup --config rollup.config.js"
   },
   "author": "lilin <lilin@lilin.site> (https://github.com/lilindog/GBKCodec)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.2",
+    "eslint": "^8.19.0",
     "rollup": "^2.75.7"
   }
 }
