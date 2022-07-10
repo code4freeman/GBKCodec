@@ -3,7 +3,7 @@
  * GBKCodec v0.0.1
  * Author: lilin <lilin@lilin.site> (https://github.com/lilindog/GBKCodec)
  * Created: 2022/6/21 02:13:30
- * Last Modify: 2022/6/21
+ * Last Modify: 2022/7/10
  * License: MIT
  */
 
@@ -30,7 +30,7 @@ const encode = (source, endianness = "BE") => {
     if (typeof source !== "string" && !(source instanceof Uint8Array))
         throw new Error(errorLog(`source参数必须为String或Uint8Array类型`));
     if (!endiannessKeys.includes(endianness))
-        throw new Error(errorLog(`endianess只能为[${endianessHub.join("、")}]`));
+        throw new Error(errorLog(`endianess只能为[${endiannessKeys.join("、")}]`));
 
     let gbCodes = [];
     // Uint8Array
@@ -104,8 +104,6 @@ const decode = (buffer, endianness = "BE") => {
 
     return new Uint8Array(
         buffer.reduce((uniCodes, byte) => {
-            debugger
-
             /**
              * GBK兼容ascii，GBK的文档虽然说是双字节存储，实测遇到a
              * scii时候，不会如utf16一样使用至少2字节来存储，仅会使
@@ -143,10 +141,10 @@ const decodeText = (buffer, endianness = "BE") => {
             str.push(
                 ...(
                     endianness === "BE" ?
-                    String.fromCharCode((str.pop() << 8) + code) :
-                    endianness === "LE" ?
-                    String.fromCharCode(str.pop() + (code << 8)) :
-                    String.fromCharCode(WHAT_THE_FUCK)
+                        String.fromCharCode((str.pop() << 8) + code) :
+                        endianness === "LE" ?
+                            String.fromCharCode(str.pop() + (code << 8)) :
+                            String.fromCharCode(WHAT_THE_FUCK)
                 )
             );
         } else {
